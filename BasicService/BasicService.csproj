@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>BasicService</AssemblyName>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BasicService</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CoreWCF.Primitives" Version="*" />
+    <PackageReference Include="CoreWCF.Http" Version="*" />
+    <PackageReference Include="CoreWCF.NetTcp" Version="*" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

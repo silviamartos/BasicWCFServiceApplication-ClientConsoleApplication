@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>TestClient</AssemblyName>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <OutputType>Exe</OutputType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RootNamespace>TestClient</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.ServiceModel.Primitives" Version="*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="*" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Connected Services\MathServiceRef\MathService.wsdl" />
+    <None Include="Connected Services\MathServiceRef\MathService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MathServiceRef\MathService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\MathServiceRef\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MathServiceRef\MathService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MathServiceRef\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MathServiceRef\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MathServiceRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+</Project>
